@@ -1,0 +1,44 @@
+import java.util.scanner;
+
+class program
+{
+	public static void main(String[] args) 
+   	{
+	int n ;
+	int rem,th,h,t,o;
+	System.out.println("enter a number:");
+	Scanner sc= new Scanner(System.in);
+	sc= Integer.nextInt(n);
+	String a[] = {"zero " , "one", "two", "three", "four" ,"five", "six", "seven", "eight", "nine", "ten","eleven", "twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"};
+	String b[] = {" " , " ", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+	String c[] = {" ", "One","Two", "Three", "Four", "Five", "Six","Seven", "Eight","Nine"};
+	String s1 = "Hundred";
+	String s2 = "Thousand";
+	if (n<20) 
+		{
+		System.out.println(a[n]);   
+		}
+	else
+		{
+		th = n/1000;
+		h = n /100;
+		rem = n % 100;
+		t = rem / 10;
+		o = rem % 10;
+			
+		if (th > 0)
+			{
+			System.out.println( c[th] + " " + s2 + " " + c[h] + " " + s1 + " " + b[t] + " " + a[o] );
+			}
+		else if (h > 0)
+			{
+			System.out.println( c[h] + " " + s1 + " " + b[t] + " " + a[o] );
+			}
+		
+		else
+			{
+			System.out.println(b[t] + " " + a[o]);  
+			} 
+    		}
+	}
+}
